@@ -1,0 +1,100 @@
+.pull-left {
+	float: left;
+}
+
+.spaceContainer {
+	background-color: #e2e2e2;
+	/* padding: 10px 5px 10px 5px; */
+	padding-top: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.filterTd {
+	width: 20%;
+	background-color: #fff;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.spaceImg {
+	background-color: #e2e2e2;
+	margin-top: 10px;
+}
+
+/* .spaceDiv {
+    height: 867px;
+    max-height: 1000px;
+	overflow-y: auto;
+} */
+
+.spaceTD {
+    width: 70%;
+    padding: 0 !important;
+}
+
+.marginTop{
+
+    background-color: #fff;
+    border: 10px solid #d0d0d0;
+    height: 500px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+}
+
+
+.fontSize{
+color: #6B3FFF;
+font-size: 18px;
+font-family: sans-serif;
+padding-top: 15px;
+}
+
+.inputSizeCss{
+background-color: #9Cff33;
+    border: 1px solid #9Cff33;
+    border-radius: 10px;
+    width: 70%;
+    color: #000;
+    font-size: 20px;
+    font-family: sans-serif;
+
+}
+.marginTopforFilterDiv{
+background-color: #fff;
+border: 10px solid #d0d0d0;
+height: 500px;
+padding-left: 30px;
+padding-right: 30px;
+width: 775px;
+}
+
+.centerSpan{
+padding-left: 20%;
+padding-right: 20%;
+border-bottom: 1px solid #d0d0d0;
+font-size: 12px;
+font-family: sans-serif;
+margin-bottom: 10px;
+}
+
+.filterRow{
+padding-left: 20px;
+padding-right: 0px;
+}
+
+.paddingTop{
+    padding-top: 5px;
+
+}
+
+.sizeSpan{
+    color: #6B3FFF;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+.developerDetailDiv{
+padding-left: 35%;
+padding-right: 35%;
+}

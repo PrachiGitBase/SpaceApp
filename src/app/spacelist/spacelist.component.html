@@ -1,0 +1,150 @@
+<div class="main">
+
+
+    <div class="container spaceContainer">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>SpaceX Launch Programs</h3>
+            </div>
+        </div>
+        <div class="row table-responsive">
+            <div class="col-md-12">
+                <table class="table">
+                    <tr>
+                        <td class="filterTd">
+                            <div class="col-sm-md-lg-3 pull-left">
+                                <div class="row">
+                                    <h2>Filters</h2>
+                                </div>
+                                <div class="row filterRow">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <span class="centerSpan">Launch Year</span><br>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6" *ngFor="let items of launchYearList;let i =index">
+                                                <div class="row">
+                                                    <input type="button" class="inputSizeCss" value={{items}}
+                                                        (click)="selectLaunchYear($event)" />
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row filterRow">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <span class="centerSpan">Successful Launch</span><br>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6"
+                                                *ngFor="let items of successfulLaunchList;let i =index">
+                                                <div class="row">
+                                                    <input type="button" value={{items}} class="inputSizeCss"
+                                                        (click)="selectLaunchSuccess($event)" />
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row filterRow">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <span class="centerSpan">Successful Land</span><br>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6" *ngFor="let items of successfulLanding;let i =index">
+                                                <div class="row">
+                                                    <input type="button" value={{items}} class="inputSizeCss"
+                                                        (click)="selectLaunchland($event)" />
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td class="spaceTD">
+                            <div class="col-sm-md-lg-9 pull-left spaceDiv" *ngIf="withoutfilterApply">
+                                <div class="col-md-4 pull-left marginTop"
+                                    *ngFor="let items of newSpaceListArr;let i =index">
+                                    <img src={{items.links.mission_patch}} width="160" height="160"
+                                        class="spaceImg"><br>
+                                    <span class="pull-left fontSize ">
+                                        <strong> {{items.mission_name}} # {{items.flight_number}} </strong></span><br>
+                                    <br>
+                                    <div *ngIf="items.mission_id.length != 0"><span class="pull-left paddingTop"><b>
+                                                Mission_ids :</b>
+                                            <ul *ngFor="let id of items.mission_id;let j =index">
+                                                <li><span class="sizeSpan"> {{id}}</span></li>
+                                            </ul>
+                                        </span></div>
+                                    <div *ngIf="items.mission_id.length == 0"><span class="pull-left paddingTop"><b>
+                                                Mission_ids :</b>
+                                            <span class="sizeSpan"> NA</span>
+                                        </span></div>
+                                    <span class="pull-left paddingTop"><b>Launch Year:</b> <span class="sizeSpan">
+                                            {{items.launch_year}} </span></span>
+                                    <span class="pull-left paddingTop"><b>Successful Launch:</b>
+                                        <span class="sizeSpan"> {{items.launch_success}} </span></span>
+
+
+                                    <span class="pull-left paddingTop"> <b>Successful
+                                            Landing:</b>
+                                        <span class="sizeSpan">
+                                            {{items.rocket.first_stage.cores[0].land_success}} </span>
+                                    </span>
+
+
+
+                                    <br>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-md-lg-9 pull-left spaceDiv" *ngIf="filterApply">
+                                <div class="col-md-4 pull-left marginTopforFilterDiv"
+                                    *ngFor="let items of successYearFilterList;let i =index">
+                                    <img src={{items.links.mission_patch}} width="160" height="160"
+                                        class="spaceImg"><br>
+                                    <span class="pull-left fontSize ">
+                                        <strong> {{items.mission_name}} # {{items.flight_number}} </strong></span><br>
+                                    <br>
+                                    <div><span class="pull-left paddingTop"><b> Mission_ids :</b>
+                                            <ul *ngFor="let id of items.mission_id;let j =index">
+                                                <li><span class="sizeSpan"> {{id}}</span></li>
+                                            </ul>
+                                        </span></div><br><br>
+                                    <span class="pull-left paddingTop"><b>Launch Year:</b> <span class="sizeSpan">
+                                            {{items.launch_year}} </span></span><br><br>
+                                    <span class="pull-left paddingTop"><b>Successful Launch:</b>
+                                        <span class="sizeSpan"> {{items.launch_success}} </span></span><br><br>
+                                    <span class="pull-left paddingTop"> <b>Successful
+                                            Landing:</b> <span class="sizeSpan">
+                                            {{items.rocket.first_stage.cores[0].land_success}} </span></span> <br>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <span class="developerDetailDiv">
+                <strong>
+                    Developed By : Prachi Singh
+                </strong>
+            </span>
+        </div>
+
+    </div>
+
+   
+</div>
