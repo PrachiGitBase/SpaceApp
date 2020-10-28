@@ -1,0 +1,44 @@
+.card {
+    height: 360px;
+    background-color: var(--sub-bg-color);
+    border-radius: 0.3em;
+    padding: 0.5em;
+    margin: 5px;
+    overflow-y: scroll;
+}
+
+.card img {
+    height: 150px;
+    width: 60%;
+    background-color: var(--main-bg-color);
+}
+
+.image {
+    text-align: center;
+}
+
+.title {
+    color: rgb(75, 13, 243);
+    font-size: 18px;
+    padding-top: 7px;
+}
+
+.details-entry {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0.2em;
+}
+
+.details-entry .details-entry-title {
+    font-weight: 700;
+}
+
+.details-entry ul {
+    margin-top: unset;
+    margin-left: -25px;
+}
+
+.details-entry-title, .details-entry-value {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}

@@ -1,0 +1,36 @@
+<div class="filters">
+    <h3>Filters</h3>
+    <p class="filter-criteria">Launch Year</p>
+    <div class="filter-container">
+        <div *ngFor="let option of yearFilterOptions" (click)="onYearFilterOptionsClick($event)" #yearBtn>
+            <app-button-detail
+                [option]="option"
+                (yearFilter)="onYearFilterChange($event)"
+                (launchSuccessFilter)="onLaunchFilterChange($event)"
+                (landSuccessFilter)="onLandingFilterChange($event)"
+            ></app-button-detail>
+        </div>
+    </div>
+    <p class="filter-criteria">Successful Launch</p>
+    <div class="filter-container">
+        <div *ngFor="let option of launchFilterOptions" (click)="onLaunchFilterOptionsClick($event)" #launchBtn>
+            <app-button-detail
+                [option]="option"
+                (yearFilter)="onYearFilterChange($event)"
+                (launchSuccessFilter)="onLaunchFilterChange($event)"
+                (landSuccessFilter)="onLandingFilterChange($event)"
+            ></app-button-detail>
+        </div>
+    </div>
+    <p class="filter-criteria">Successful Landing</p>
+    <div class="filter-container">
+        <div *ngFor="let option of landingFilterOptions" (click)="onLandFilterOptionsClick($event)" #landBtn>
+            <app-button-detail
+                [option]="option"
+                (yearFilter)="onYearFilterChange($event)"
+                (launchSuccessFilter)="onLaunchFilterChange($event)"
+                (landSuccessFilter)="onLandingFilterChange($event)"
+            ></app-button-detail>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+.wrapper {
+    display: grid;
+    background-color: #dee0df;
+}
+
+.wrapper header {
+    text-align: center;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+   /* margin-top: 20px; */
+    background-color: #dee0df;
+}
+
+/* For tablets */
+@media (min-width: 700px) {
+    .wrapper header {
+        text-align: left;
+        font-weight: bold;
+    }
+}
+
+/* For desktops */
+@media (min-width: 1024px) {
+    .wrapper header {
+        text-align: left;
+        font-weight: bold;
+    }
+}

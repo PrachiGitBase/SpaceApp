@@ -1,0 +1,19 @@
+.yearLaunchBtn {
+    background-color: #98DB7B;
+    border: none;
+    outline:none;
+    color: var(--sub-bg-color);
+    padding: 5px 23px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+.active{
+    background-color: #48B41B;
+    border: none;
+    outline:none;
+}

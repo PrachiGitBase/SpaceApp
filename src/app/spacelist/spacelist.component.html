@@ -1,0 +1,25 @@
+<div class="container">
+    <section class="tab-section">
+        <app-filter-detail
+            (yearFilter)="onYearFilterChange($event)"
+            (launchSuccessFilter)="onLaunchFilterChange($event)"
+            (landSuccessFilter)="onLandingFilterChange($event)"
+        ></app-filter-detail>
+    </section>
+    <div *ngIf="!showSpinner; else loading">
+        <section class="card-section" *ngIf="launchList && launchList.length > 0 ; else noRecord">
+            <div *ngFor="let item of launchList" class="card-container">
+                <app-rocket-detail [launchDetail]="item"></app-rocket-detail>
+            </div>
+        </section>
+    </div>
+    
+    <ng-template #loading>
+        <div class="loader"></div>
+    </ng-template>
+    
+    <ng-template #noRecord>
+        <div *ngIf="!error" class="no-records">We are sorry!!. Try different filters.</div>
+        <div *ngIf="error" class="no-records error">We are sorry!!. Something went wrong</div>
+    </ng-template>
+</div>

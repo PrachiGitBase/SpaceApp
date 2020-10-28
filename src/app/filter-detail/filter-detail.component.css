@@ -1,0 +1,20 @@
+.filters {
+    background-color: var(--sub-bg-color);
+    border-radius: 0.3em;
+    padding: 0.5em;
+    margin: 5px;
+}
+.filter-criteria {
+    text-align: center;
+    border-bottom: 1px solid;
+    font-weight: 400;
+}
+.filter-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+}
+
+.filter-container div app-chip {
+    margin: 5px;
+}

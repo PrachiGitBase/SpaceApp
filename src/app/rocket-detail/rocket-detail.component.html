@@ -1,0 +1,35 @@
+<div class="card">
+    <section class="image">
+        <img [src]="launchDetail?.links?.mission_patch_small" [alt]="launchDetail?.mission_name">
+    </section>
+    <section>
+        <h4 class="title">{{ launchDetail?.mission_name }} #{{ launchDetail?.flight_number }}</h4>
+        <div class="details-entry" *ngIf="launchDetail?.mission_id && launchDetail?.mission_id.length > 0; else noMissionId">
+            <div class="details-entry-title">Mission Ids:</div>
+            <ul class="details-entry-value">
+                <li *ngFor="let id of launchDetail?.mission_id">{{ id }}</li>
+            </ul>
+        </div>
+        <ng-template #noMissionId>
+            <div class="details-entry">
+                <div class="details-entry-title">Mission Ids:</div>
+                <span class="details-entry-value">No Mission Id Found</span>
+            </div>
+        </ng-template>
+        <div class="details-entry">
+            <div class="details-entry-title">Launch Year:</div>
+            <span class="details-entry-value">{{ launchDetail?.launch_year }}</span>
+        </div>      
+        <div class="details-entry">
+            <div class="details-entry-title">Successful Launch:</div>
+            <span class="details-entry-value">{{ launchDetail?.launch_success }}</span>
+        </div>
+        <div class="details-entry" *ngIf="launchDetail?.rocket?.first_stage && launchDetail?.rocket?.first_stage.cores && launchDetail?.rocket?.first_stage.cores.length > 0">
+            <div class="details-entry-title">Successful Landing:</div>
+            <span class="details-entry-value" *ngIf="launchDetail?.rocket?.first_stage?.cores[0]?.land_success !== null; else noLandingDetails">{{ launchDetail?.rocket?.first_stage?.cores[0]?.land_success }}</span>
+            <ng-template #noLandingDetails>
+                <span class="details-entry-value">Landing Status Not Found</span>
+            </ng-template>
+        </div>
+    </section>
+</div>
